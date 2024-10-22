@@ -1,0 +1,108 @@
+* {
+    text-decoration: none;
+}
+.search-container {
+    position: relative; /* Ensure it's positioned correctly */
+    z-index: 10; /* Higher than any potential overlay */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #007BFF, #6F42C1);
+    color: white;
+    position: fixed;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.sidebar h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu-bar {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-bar ul {
+    padding: 0;
+}
+
+.menu-bar li {
+    margin: 15px 0;
+}
+
+.menu-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu-bar a:hover, .menu-bar a.active {
+    background-color: #18054e;
+    text-decoration: none;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.scrollable-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: linear-gradient(to bottom, #007BFF, #6F42C1); /* Updated gradient */
+}
+
+.edit-btn, .delete-btn {
+    cursor: pointer;
+}
+
+.menu-btn {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.open {
+    width: 300px;
+}
+
+.expanded {
+    margin-left: 300px;
+}
+
+
+

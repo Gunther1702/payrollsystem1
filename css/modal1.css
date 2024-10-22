@@ -1,0 +1,111 @@
+/* Modal Overlay */
+
+
+
+.modal-form {
+    background-color: #e6f7ff; /* Light blue background */
+    padding: 20px; /* Inner padding */
+    border-radius: 4px; /* Rounded corners */
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: none; /* Hidden by default */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    z-index: 1000; /* Above all other content */
+}
+
+/* Modal Container */
+.modal-container {
+    background-color: #fff; /* White background for modal */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    width: 700px; /* Modal width */
+    animation: fadeIn 0.3s ease; /* Fade-in animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header styling */
+.modal-header {
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* This will space out title and close button */
+    align-items: center; /* Vertically center the items */
+}
+
+.modal-title {
+    font-size: 1.5em; /* Increase font size for better visibility */
+    color: #007bff; /* Change color to match your theme */
+}
+
+.modal-close {
+    cursor: pointer;
+    font-size: 24px; /* Size of the close button */
+    color: #6c757d;
+    margin-left: 20px; /* Add margin to the left to separate from the title */
+}
+
+.modal-close:hover {
+    color: #000; /* Darker on hover */
+}
+
+/* Form fields */
+.modal-container input[type="text"],
+.modal-container input[type="email"],
+.modal-container select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth border transition */
+}
+
+/* Focus effect for input fields */
+.modal-container input:focus,
+.modal-container select:focus {
+    border-color: #6DA5C0; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit button styling */
+.modal-container input[type="submit"] {
+    background: linear-gradient(to bottom, #007BFF, #6F42C1);
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px; /* Inner padding */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Hover effect for the submit button */
+.modal-container input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #007BFF, #6F42C1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .modal-container {
+        width: 90%; /* Full width on smaller screens */
+    }
+}

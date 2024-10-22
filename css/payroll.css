@@ -1,0 +1,185 @@
+/* Search Input */
+#searchInput {
+    width: 100%; /* Default to full width */
+    max-width: 300px; /* Optional: limit the maximum width */
+    height: 30px; /* Maintain height */
+    padding: 5px; /* Add padding for better usability */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+    #searchInput {
+        max-width: 200px; /* Reduce max width on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    #searchInput {
+        max-width: 150px; /* Further reduce max width on extra small screens */
+    }
+}
+
+/* Table Styles */
+#employeeTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#employeeTable th {
+    font-size: 18px;
+    background: linear-gradient(to bottom, #007BFF, #6F42C1);
+    color: white;
+    text-align: center; /* Center align header text */
+    cursor: pointer; /* Indicate that the headers are clickable */
+    position: sticky;
+    top: 0;
+    z-index: 10; /* For sticky header */
+}
+
+#employeeTable td {
+    font-size: 20px;
+    text-align: left; /* Align data cells to the left */
+    padding: 10px; /* Consistent padding */
+}
+
+#employeeTable th:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+}
+
+/* Button Group */
+.btn-group {
+    border-radius: 12px;
+}
+
+/* Button Primary */
+.btn-primary,
+.btn-primary.ml-3 {
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.2s; /* Add transition for hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* General Styles */
+* {
+    text-decoration: none;
+}
+
+.menu-btn {
+    background-color: #395886;
+    color: white;
+    border: none; /* Adjusted to none for cleaner look */
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.menu-btn:hover {
+    background-color: black;
+}
+
+.main-content header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.header-title h1 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the pagination */
+    margin: 20px 0; /* Space around the pagination */
+}
+
+.pagination span {
+    background-color: gray; /* No background for inactive pages */
+    color: black; /* Text color for page numbers */
+    margin: 0 5px; /* Margin between spans */
+    padding: 10px 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.pagination span.active {
+    background-color: white; /* Background color for active page */
+    color: black; /* Text color for active page */
+}
+
+.pagination span:hover {
+    background-color: #f0f0f0; /* Hover effect for spans */
+}
+
+.pagination button {
+    background-color: white;
+    color: black;
+    border: none; /* Remove border */
+    border-radius: 5px;
+    height: 50px; /* Increased height for better click area */
+    padding: 10px 15px; /* Padding for comfortable click area */
+    font-size: 16px; /* Adjust font size if needed */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: gray; /* Change hover color */
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Headings */
+h2 {
+    margin: 20px 0;
+}
+
+/* Table Styling */
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Total Box */
+.total-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #F5F5F5;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.total-text {
+    font-weight: bold;
+    text-align: right;
+    display: block;
+}
+
+/* Alert Box */
+.alert {
+    background-color: #066cfa;
+    color: white;
+    padding: 10px; /* Add padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below alert */
+}

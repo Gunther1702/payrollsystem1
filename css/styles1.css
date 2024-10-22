@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background-image: 
+        linear-gradient(to bottom, rgba(250, 247, 247, 0.7), rgba(153, 153, 170, 0.7), rgba(67, 67, 141, 0.7)), 
+        url("img/au-south.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.main {
+    width: 350px;
+    height: auto; 
+    background: rgba(249, 249, 252, 0.9); 
+    border-radius: 10px;
+    border: 2px solid #827894; 
+    box-shadow: 15px 20px 50px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #1b1b1b;
+}
+
+label {
+    color: #080808;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+input, select {
+    width: 90%; 
+    padding: 15px; 
+    margin: 10px auto; 
+    border: 1px solid #514f55; 
+    border-radius: 5px;
+    background: rgba(247, 244, 244, 0.3); 
+    color: #000; 
+    font-size: 1em; 
+    box-sizing: border-box; 
+}
+
+button {
+    font-size: 150%;
+    width: 100%;
+    padding: 15px;
+    background: #3b3a3b;
+    color: rgb(22, 21, 21);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #58575a;
+}
+
+a {
+    color: #1e88e5; /* Change link color to match the button hover color */
+    text-decoration: none; /* Remove default underline */
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 2px solid transparent; /* Add a transparent border for spacing */
+    transition: border-color 0.2s; /* Smooth transition for the border color */
+}
+
+a:hover {
+    border-bottom: 2px solid #1e88e5; /* Underline on hover */
+}
+
+.input-container {
+    position: relative;
+    width: 95%;
+    margin: 10px auto;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em; 
+    color: #504e52; 
+}
+
+.input-container i#toggleLoginPassword,
+.input-container i#toggleSignupPassword {
+    right: 10px; 
+    left: unset;
+}
+
+.input-container select,
+.input-container input {
+    width: 100%;
+    padding: 15px 15px 15px 40px; 
+    margin: 10px 0;
+    border: 1px solid #3b3b3b;
+    border-radius: 5px;
+    background: rgba(247, 244, 244, 0.3);
+    box-sizing: border-box; 
+    color: #000;
+    font-size: 1em; 
+}
+
+.input-container select option {
+    color: #000; 
+}
+
+@media (max-width: 400px) {
+    .main {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    input, select, button {
+        font-size: 1em; 
+    }
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards; /* Animation for the sign-up form */
+}
